@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Treino de Academia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@400;700&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" media="screen,projection" href="data:text/css;base64,LyoqQ1NTIGZpY2hhIGRlIHRyZWlubyovDQpib2R5IHsNCiAgICBmb250LWZhbWlseTogc2Fucy1zZXJpZjsNCiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMTExOw0KICAgIGNvbG9yOiAjZWVlOw0KICAgIG1hcmdpbjogMTBweDsgLyogUmVkdXppbmRvIGEgbWFyZ2VtIHBhZHLDo28gKi8NCn0NCg0KaDIgew0KICAgIGNvbG9yOiAjZmY4YzAwOw0KICAgIHRleHQtYWxpZ246IGNlbnRlcjsNCiAgICBtYXJnaW4tYm90dG9tOiAyMHB4OyAvKiBSZWR1emluZG8gYSBtYXJnZW0gaW5mZXJpb3IgKi8NCn0NCg0KI3RyYWluaW5nLXNoZWV0ID4gZGl2IHsNCiAgICBtYXJnaW4tYm90dG9tOiAyMHB4OyAvKiBSZWR1emluZG8gYSBtYXJnZW0gaW5mZXJpb3IgKi8NCiAgICBwYWRkaW5nOiAxNXB4Ow0KICAgIGJvcmRlci1yYWRpdXM6IDhweDsNCiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMjIyOw0KfQ0KDQouc2VxdWVuY2lhLWhlYWRlciB7DQogICAgYmFja2dyb3VuZC1jb2xvcjogIzMzMzsNCiAgICBjb2xvcjogI2ZmOGMwMDsNCiAgICBmb250LXdlaWdodDogYm9sZDsNCiAgICBwYWRkaW5nOiAxMHB4Ow0KICAgIHRleHQtYWxpZ246IGNlbnRlcjsNCiAgICBtYXJnaW4tYm90dG9tOiAxMHB4Ow0KICAgIGJvcmRlci1yYWRpdXM6IDRweDsNCn0NCg0KLmdydXBvLWhlYWRlciB7DQogICAgYmFja2dyb3VuZC1jb2xvcjogIzQ0NDsNCiAgICBjb2xvcjogI2RkZDsNCiAgICBwYWRkaW5nOiA4cHg7DQogICAgZm9udC1zdHlsZTogaXRhbGljOw0KICAgIG1hcmdpbi1ib3R0b206IDVweDsNCiAgICBib3JkZXItcmFkaXVzOiAzcHg7DQp9DQoNCi5leGVyY2ljaW9zLWdydXBvIHsNCiAgICBtYXJnaW4tYm90dG9tOiAxMHB4Ow0KfQ0KDQouZXhlcmNpY2lvLXJvdyB7DQogICAgZGlzcGxheTogZ3JpZDsNCiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdChhdXRvLWZpdCwgbWlubWF4KDEwMHB4LCAxZnIpKSA1MHB4OyAvKiBMYXlvdXQgcmVzcG9uc2l2byBkYXMgY29sdW5hcyAqLw0KICAgIGdhcDogNXB4Ow0KICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7DQogICAgbWFyZ2luLWJvdHRvbTogOHB4Ow0KfQ0KDQouZXhlcmNpY2lvLXJvdyBpbnB1dFt0eXBlPSJ0ZXh0Il0sDQouZXhlcmNpY2lvLXJvdyBpbnB1dFt0eXBlPSJudW1iZXIiXSB7DQogICAgYmFja2dyb3VuZC1jb2xvcjogIzU1NTsNCiAgICBjb2xvcjogI2VlZTsNCiAgICBib3JkZXI6IG5vbmU7DQogICAgcGFkZGluZzogOHB4Ow0KICAgIGJvcmRlci1yYWRpdXM6IDRweDsNCiAgICBib3gtc2l6aW5nOiBib3JkZXItYm94Ow0KICAgIHdpZHRoOiAxMDAlOyAvKiBJbnB1dCBvY3VwYSBhIGxhcmd1cmEgZGEgY8OpbHVsYSAqLw0KfQ0KDQoucmVtb3ZlLWJ1dHRvbiB7DQogICAgYmFja2dyb3VuZC1jb2xvcjogI2M4MTgxODsNCiAgICBjb2xvcjogd2hpdGU7DQogICAgYm9yZGVyOiBub25lOw0KICAgIHBhZGRpbmc6IDhweDsNCiAgICBib3JkZXItcmFkaXVzOiA0cHg7DQogICAgY3Vyc29yOiBwb2ludGVyOw0KICAgIGZvbnQtc2l6ZTogMC44ZW07IC8qIFJlZHV6aW5kbyBvIHRhbWFuaG8gZGEgZm9udGUgZW0gdGVsYXMgbWVub3JlcyAqLw0KfQ0KDQouYWRkLWJ1dHRvbiB7DQogICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmOGMwMDsNCiAgICBjb2xvcjogYmxhY2s7DQogICAgYm9yZGVyOiBub25lOw0KICAgIHBhZGRpbmc6IDEwcHggMTVweDsNCiAgICBib3JkZXItcmFkaXVzOiA0cHg7DQogICAgY3Vyc29yOiBwb2ludGVyOw0KICAgIG1hcmdpbi10b3A6IDEwcHg7DQogICAgZm9udC13ZWlnaHQ6IGJvbGQ7DQogICAgZGlzcGxheTogYmxvY2s7DQogICAgd2lkdGg6IGZpdC1jb250ZW50Ow0KICAgIGZvbnQtc2l6ZTogMC45ZW07IC8qIFJlZHV6aW5kbyBvIHRhbWFuaG8gZGEgZm9udGUgZW0gdGVsYXMgbWVub3JlcyAqLw0KfQ0KDQouc2F2ZS1idXR0b24gew0KICAgIGJhY2tncm91bmQtY29sb3I6ICM0Y2FmNTA7DQogICAgY29sb3I6IHdoaXRlOw0KICAgIGJvcmRlcjogbm9uZTsNCiAgICBwYWRkaW5nOiAxMnB4IDIwcHg7DQogICAgYm9yZGVyLXJhZGl1czogNHB4Ow0KICAgIGN1cnNvcjogcG9pbnRlcjsNCiAgICBmb250LXNpemU6IDFlbTsgLyogUmVkdXppbmRvIG8gdGFtYW5obyBkYSBmb250ZSBlbSB0ZWxhcyBtZW5vcmVzICovDQogICAgbWFyZ2luLXRvcDogMjBweDsNCiAgICBkaXNwbGF5OiBibG9jazsNCiAgICBtYXJnaW4tbGVmdDogYXV0bzsNCiAgICBtYXJnaW4tcmlnaHQ6IGF1dG87DQogICAgd2lkdGg6IDgwJTsgLyogTGFyZ3VyYSB1bSBwb3VjbyBtZW5vciBlbSB0ZWxhcyBtZW5vcmVzICovDQogICAgbWF4LXdpZHRoOiAzMDBweDsgLyogTGFyZ3VyYSBtw6F4aW1hIHBhcmEgdGVsYXMgbWFpb3JlcyAqLw0KfQ0KDQouc2F2ZS1idXR0b246aG92ZXIgew0KICAgIGJhY2tncm91bmQtY29sb3I6ICMzODhlM2M7DQp9DQoNCi8qIE1lZGlhIHF1ZXJpZXMgcGFyYSB0ZWxhcyBtZW5vcmVzICovDQpAbWVkaWEgKG1heC13aWR0aDogNjAwcHgpIHsNCiAgICAuZXhlcmNpY2lvLXJvdyB7DQogICAgICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyIDFmciA1MHB4OyAvKiBSZWR1emluZG8gY29sdW5hcyBlbSB0ZWxhcyBtZW5vcmVzICovDQogICAgfQ0KICAgIC5leGVyY2ljaW8tcm93IGlucHV0W3R5cGU9InRleHQiXTpudGgtY2hpbGQoMiksIC8qIE9jdWx0YW5kbyBvIGNhbXBvICdTw6lyaWVzJyAqLw0KICAgIC5leGVyY2ljaW8tcm93IGlucHV0W3R5cGU9Im51bWJlciJdOm50aC1jaGlsZCgyKSwNCiAgICAuZXhlcmNpY2lvLXJvdyBpbnB1dFt0eXBlPSJ0ZXh0Il06bnRoLWNoaWxkKDQpLCAvKiBPY3VsdGFuZG8gbyBjYW1wbyAnRGVzY2Fuc28nICovDQogICAgLmV4ZXJjaWNpby1yb3cgaW5wdXRbdHlwZT0ibnVtYmVyIl06bnRoLWNoaWxkKDMpIHsgLyogJ1JlcGV0acOnw7VlcycgcGFzc2EgcGFyYSBhIHNlZ3VuZGEgcG9zacOnw6NvICovDQogICAgICAgIG9yZGVyOiAzOyAvKiBNb3ZlIHBhcmEgYmFpeG8gKi8NCiAgICAgICAgZ3JpZC1jb2x1bW46IDEgLyBzcGFuIDI7IC8qIE9jdXBhIGR1YXMgY29sdW5hcyAqLw0KICAgIH0NCiAgICAuZXhlcmNpY2lvLXJvdyBsYWJlbDpudGgtY2hpbGQoMiksIC8qIE9jdWx0YW5kbyBsYWJlbHMgc2Ugdm9jw6ogYXMgdGl2ZXNzZSAqLw0KICAgIC5leGVyY2ljaW8tcm93IGxhYmVsOm50aC1jaGlsZCg0KSB7DQogICAgICAgIGRpc3BsYXk6IG5vbmU7DQogICAgfQ0KfQ0KDQpAbWVkaWEgKG1heC13aWR0aDogNDAwcHgpIHsNCiAgICAuZXhlcmNpY2lvLXJvdyB7DQogICAgICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyIDUwcHg7IC8qIEFpbmRhIG1lbm9zIGNvbHVuYXMgKi8NCiAgICB9DQogICAgLmV4ZXJjaWNpby1yb3cgaW5wdXRbdHlwZT0idGV4dCJdOm50aC1jaGlsZCgyKSwNCiAgICAuZXhlcmNpY2lvLXJvdyBpbnB1dFt0eXBlPSJudW1iZXIiXTpudGgtY2hpbGQoMikgew0KICAgICAgICBvcmRlcjogMjsNCiAgICAgICAgZ3JpZC1jb2x1bW46IDEgLyBzcGFuIDE7DQogICAgfQ0KfQ0KDQoNCi8qKmNzcyBwZXJmaWwvDQoNCg==">
+  <script type="module" crossorigin src="/assets/tabelaTreino-mAfnZUGm.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/essencial-DjFnyu8i.js">
+  <link rel="stylesheet" crossorigin href="/assets/essencial-BTFhFKIf.css">
+</head>
+
+<body>
+
+    <h2>Ficha de Treino</h2>
+
+    <div id="training-sheet">
+        <div class="sequencia" data-sequencia="1">
+            <h3 class="sequencia-header">Sequência 1: Peito e Tríceps</h3>
+            <div class="grupo">
+                <h4 class="grupo-header">Peito</h4>
+                <div class="exercicios-grupo" data-grupo="peito">
+                    <div class="exercicio-row">
+                        <input type="text" value="Supino reto" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="10" placeholder="Repetições">
+                        <input type="text" value="60-90 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                    <div class="exercicio-row">
+                        <input type="text" value="Supino inclinado" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="10" placeholder="Repetições">
+                        <input type="text" value="60-90 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                    <div class="exercicio-row">
+                        <input type="text" value="Crucifixo" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="12" placeholder="Repetições">
+                        <input type="text" value="60 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                </div>
+                <button class="add-button" data-grupo="peito">Adicionar Exercício</button>
+            </div>
+            <div class="grupo">
+                <h4 class="grupo-header">Tríceps</h4>
+                <div class="exercicios-grupo" data-grupo="triceps">
+                    <div class="exercicio-row">
+                        <input type="text" value="Tríceps testa" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="12" placeholder="Repetições">
+                        <input type="text" value="60 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                    <div class="exercicio-row">
+                        <input type="text" value="Tríceps francês" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="12" placeholder="Repetições">
+                        <input type="text" value="60 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                </div>
+                <button class="add-button" data-grupo="triceps">Adicionar Exercício</button>
+            </div>
+        </div>
+
+        <div class="sequencia" data-sequencia="2">
+            <h3 class="sequencia-header">Sequência 2: Costas e Bíceps</h3>
+            <div class="grupo">
+                <h4 class="grupo-header">Costas</h4>
+                <div class="exercicios-grupo" data-grupo="costas">
+                    <div class="exercicio-row">
+                        <input type="text" value="Remada curvada" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="10" placeholder="Repetições">
+                        <input type="text" value="60-90 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                    <div class="exercicio-row">
+                        <input type="text" value="Puxada frente" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="10" placeholder="Repetições">
+                        <input type="text" value="60-90 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                </div>
+                <button class="add-button" data-grupo="costas">Adicionar Exercício</button>
+            </div>
+            <div class="grupo">
+                <h4 class="grupo-header">Bíceps</h4>
+                <div class="exercicios-grupo" data-grupo="biceps">
+                    <div class="exercicio-row">
+                        <input type="text" value="Rosca direta" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="12" placeholder="Repetições">
+                        <input type="text" value="60 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                    <div class="exercicio-row">
+                        <input type="text" value="Rosca scott" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="12" placeholder="Repetições">
+                        <input type="text" value="60 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                </div>
+                <button class="add-button" data-grupo="biceps">Adicionar Exercício</button>
+            </div>
+        </div>
+
+        <div class="sequencia" data-sequencia="3">
+            <h3 class="sequencia-header">Sequência 3: Quadríceps e Panturrilha</h3>
+            <div class="grupo">
+                <h4 class="grupo-header">Quadríceps</h4>
+                <div class="exercicios-grupo" data-grupo="quadriceps">
+                    <div class="exercicio-row">
+                        <input type="text" value="Agachamento" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="10" placeholder="Repetições">
+                        <input type="text" value="90-120 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                    <div class="exercicio-row">
+                        <input type="text" value="Afundo" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="12" placeholder="Repetições">
+                        <input type="text" value="60-90 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                    <div class="exercicio-row">
+                        <input type="text" value="Leg press" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="12" placeholder="Repetições">
+                        <input type="text" value="60-90 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                </div>
+                <button class="add-button" data-grupo="quadriceps">Adicionar Exercício</button>
+            </div>
+            <div class="grupo">
+                <h4 class="grupo-header">Panturrilha</h4>
+                <div class="exercicios-grupo" data-grupo="panturrilha">
+                    <div class="exercicio-row">
+                        <input type="text" value="Flexão plantar em pé" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="15" placeholder="Repetições">
+                        <input type="text" value="45 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                    <div class="exercicio-row">
+                        <input type="text" value="Flexão plantar sentado" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="15" placeholder="Repetições">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                </div>
+                <button class="add-button" data-grupo="panturrilha">Adicionar Exercício</button>
+            </div>
+        </div>
+
+        <div class="sequencia" data-sequencia="4">
+            <h3 class="sequencia-header">Sequência 4: Glúteo e Posterior</h3>
+            <div class="grupo">
+                <h4 class="grupo-header">Glúteo</h4>
+                <div class="exercicios-grupo" data-grupo="gluteo">
+                    <div class="exercicio-row">
+                        <input type="text" value="Levantamento terra" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="8" placeholder="Repetições">
+                        <input type="text" value="90-120 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                    <div class="exercicio-row">
+                        <input type="text" value="Stiff" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="12" placeholder="Repetições">
+                        <input type="text" value="60-90 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                </div>
+                <button class="add-button" data-grupo="gluteo">Adicionar Exercício</button>
+            </div>
+            <div class="grupo">
+                <h4 class="grupo-header">Posterior</h4>
+                <div class="exercicios-grupo" data-grupo="posterior">
+                    <div class="exercicio-row">
+                        <input type="text" value="Ponte" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="15" placeholder="Repetições">
+                        <input type="text" value="45-60 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                    <div class="exercicio-row">
+                        <input type="text" value="Agachamento búlgaro" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="12" placeholder="Repetições">
+                        <input type="text" value="60-90 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                </div>
+                <button class="add-button" data-grupo="posterior">Adicionar Exercício</button>
+            </div>
+        </div>
+
+        <button id="save-workout" class="save-button">Salvar Ficha</button>
+    </div>
+
+
+    </script>
+</body>
+
+</html>
